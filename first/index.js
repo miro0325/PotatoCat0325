@@ -7,7 +7,7 @@ canvas.height = 576;
 c.fillRect(0,0,canvas.width,canvas.height);
 
 class Sprite {
-    constructor(position,velocity) {
+    constructor({position,velocity}) {
 
         this.position = position;
         this.velocity = velocity;
@@ -21,7 +21,7 @@ class Sprite {
 
     update() {
         this.draw();
-        //this.position.y += 1;
+        this.position.y += 10;
     }
 }
 
