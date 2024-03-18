@@ -68,7 +68,7 @@ function animate() {
 
 animate();
 
-window.addEventListener("keydown",(event) => {
+window.addEventListener("key",(event) => {
     switch(event.key) {
         case "d":
             player.velocity.x = 1;
@@ -77,7 +77,7 @@ window.addEventListener("keydown",(event) => {
             player.velocity.x = -1;
             breal;
         case "w":
-            player.velocity.y += 5;
+            player.velocity.y -= 10;
             break;
     }
 
