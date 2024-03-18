@@ -15,6 +15,7 @@ class Sprite {
         this.height = 150;
     }
     draw() {
+        c.fillStyle = "red";
         c.fillRect(this.position.x,this.position.y,this.width,this.height);
     }
 
