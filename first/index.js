@@ -57,6 +57,20 @@ const enemy = new Sprite({
     },
 });
 
+const keys = {
+    w: {
+        pressed : false,
+    },
+    a: {
+        pressed : false,
+    },
+    
+    d: {
+        pressed : false,
+    }
+
+};
+
 function animate() {
     window.requestAnimationFrame(animate);
     c.fillStyle = "black";
@@ -64,20 +78,25 @@ function animate() {
 
     player.update();
     enemy.update();
+
+    player.velocity.x = 0;
 }
 
 animate();
 
-window.addEventListener("key",(event) => {
+window.addEventListener("keydown",(event) => {
     switch(event.key) {
         case "d":
             player.velocity.x = 1;
+            keys.d.pressed = true;
             break;
         case "a":
             player.velocity.x = -1;
+            keys.a.pressed = true;
             breal;
         case "w":
             player.velocity.y -= 10;
+            keys.w.pressed = true;
             break;
     }
 
