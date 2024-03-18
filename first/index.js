@@ -20,7 +20,7 @@ class Sprite {
 
     update() {
         this.draw();
-        this.position.y += 1;
+        //this.position.y += 1;
     }
 }
 
